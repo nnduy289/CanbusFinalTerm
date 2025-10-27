@@ -7,7 +7,6 @@
 #include "CAN_Tx.h"
 #include "CAN_Rx.h"
 #include "CAN_Filter.h"
-#include "CAN_bitTiming.h"
 #include "CAN_errorManage.h"
 #include "CAN_timeTrigger.h"
 #include <stdio.h>

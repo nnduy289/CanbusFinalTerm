@@ -28,7 +28,7 @@
     <TargetOption>
       <CLKADS>12000000</CLKADS>
       <OPTTT>
-        <gFlags>0</gFlags>
+        <gFlags>1</gFlags>
         <BeepAtEnd>1</BeepAtEnd>
         <RunSim>0</RunSim>
         <RunTarget>1</RunTarget>
@@ -211,8 +211,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_Rx.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_Rx.c</FilenameWithoutPath>
+      <PathWithFileName>.\src\CAN_errorManage.c</PathWithFileName>
+      <FilenameWithoutPath>CAN_errorManage.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -223,8 +223,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_Tx.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_Tx.c</FilenameWithoutPath>
+      <PathWithFileName>.\src\CAN_Filter.c</PathWithFileName>
+      <FilenameWithoutPath>CAN_Filter.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -235,8 +235,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_Filter.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_Filter.c</FilenameWithoutPath>
+      <PathWithFileName>.\src\CAN_Mode.c</PathWithFileName>
+      <FilenameWithoutPath>CAN_Mode.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -247,8 +247,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_bitTiming.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_bitTiming.c</FilenameWithoutPath>
+      <PathWithFileName>.\src\CAN_Rx.c</PathWithFileName>
+      <FilenameWithoutPath>CAN_Rx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -259,7 +259,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_timeTrigger.c</PathWithFileName>
+      <PathWithFileName>.\src\CAN_timeTrigger.c</PathWithFileName>
       <FilenameWithoutPath>CAN_timeTrigger.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -271,32 +271,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_Mode.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_Mode.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>8</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_Mode.h</PathWithFileName>
-      <FilenameWithoutPath>CAN_Mode.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>9</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\CAN_errorManage.c</PathWithFileName>
-      <FilenameWithoutPath>CAN_errorManage.c</FilenameWithoutPath>
+      <PathWithFileName>.\src\CAN_Tx.c</PathWithFileName>
+      <FilenameWithoutPath>CAN_Tx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

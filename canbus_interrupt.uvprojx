@@ -256,17 +256,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -276,7 +276,7 @@
                 <Size>0x10000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -385,44 +385,34 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>CAN_Rx.c</FileName>
+              <FileName>CAN_errorManage.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\CAN_Rx.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_Tx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CAN_Tx.c</FilePath>
+              <FilePath>.\src\CAN_errorManage.c</FilePath>
             </File>
             <File>
               <FileName>CAN_Filter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\CAN_Filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_bitTiming.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CAN_bitTiming.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_timeTrigger.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CAN_timeTrigger.c</FilePath>
+              <FilePath>.\src\CAN_Filter.c</FilePath>
             </File>
             <File>
               <FileName>CAN_Mode.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\CAN_Mode.c</FilePath>
+              <FilePath>.\src\CAN_Mode.c</FilePath>
             </File>
             <File>
-              <FileName>CAN_Mode.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CAN_Mode.h</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_errorManage.c</FileName>
+              <FileName>CAN_Rx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\CAN_errorManage.c</FilePath>
+              <FilePath>.\src\CAN_Rx.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_timeTrigger.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CAN_timeTrigger.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Tx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CAN_Tx.c</FilePath>
             </File>
           </Files>
         </Group>
