@@ -7,7 +7,7 @@ extern volatile uint32_t lowdataRcv;
 extern volatile uint32_t highdataRcv;
 
 void RecieveMailboxConfig(){
-    // Ð?i d?n khi CÓ (>=1) pending message ? FIFO0
+    // wait for pending msg come => FIFO had msg
     while ((CAN1->RF0R & 0x3) == 0) { /* wait */ }
 
     idDataRcv        = CAN1->sFIFOMailBox[0].RIR;

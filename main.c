@@ -1,6 +1,5 @@
 #include "CAN.h"
 
-// extern t? CAN_Rx.c n?u c?n
 volatile uint32_t idDataRcv;
 volatile uint32_t dlcTimestampRcv;
 volatile uint32_t lowdataRcv;
@@ -21,15 +20,15 @@ int main(void){
     RCC->APB1ENR |= RCC_APB1ENR_CAN1EN;
 		
     GPIOconfig();
-
+		 GPIOC->BSRR = (1 << 13);  // LED OFF
 	
     CAN_Test_LoopbackModeSetting();
 
     while (1) {
-        TransmitMailboxConfig();     // g?i STID=0x1
-        RecieveMailboxConfig();      // d?c v? bi?n global & release FIFO
+        TransmitMailboxConfig();     // send STID=0x1
+        RecieveMailboxConfig();      // receive msg through global variable & release FIFO
 
-        // L?y IDE d? tr�nh nh?m extended
+        
         uint8_t ide = (uint8_t)((idDataRcv >> 2) & 0x1);
         uint16_t stid = (uint16_t)((idDataRcv >> 21) & 0x7FF);
 

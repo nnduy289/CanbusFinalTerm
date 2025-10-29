@@ -2,7 +2,7 @@
 
 void CAN_InitializationModeSetting(){
 		CAN1->MCR &= ~CAN_MCR_SLEEP; //clear sleep bit to wakeup 
-		while(CAN1->MCR & CAN_MSR_SLAK);
+		while(CAN1->MSR & CAN_MSR_SLAK);
 		CAN1->MCR |= CAN_MCR_INRQ;	//enter initialization mode
 		while(!(CAN1->MSR & CAN_MSR_INAK)); 	//wait for hardware confirmed request to enter initialization mode
 		//set Baudrate 9600 bit/s (16tq) => BRP = 233, TS1 = 12 => BS1 = 13tq, TS2 = 1 => BS2 = 2tq
@@ -17,7 +17,7 @@ void CAN_InitializationModeSetting(){
 		CAN1->MCR &= ~CAN_MCR_NART; //automatically retransmit msg until it has been successfully transmitted according to the CAN standard
 		CAN1->MCR |= CAN_MCR_AWUM; //hardware tu danh thuc khi phat hien tin hieu CAN hop le
 		CAN1->MCR |= CAN_MCR_ABOM; //hardware handle automatic bus-off management recovery
-		CAN1->MCR |= CAN_MCR_TTCM; //time triggered communication
+	//	CAN1->MCR |= CAN_MCR_TTCM; //time triggered communication
 		CAN1->MCR &= ~(1 << 16); //CAN working during debug
 	//filter banks(mode, scale, FIFO assignment, activation, filter values).....
 		FilterBankConfig(); //dual 16 bit, identifier list mode, filter bank number 0,... 
