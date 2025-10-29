@@ -20,6 +20,7 @@ void CAN_InitializationModeSetting(){
 		CAN1->MCR |= CAN_MCR_TTCM; //time triggered communication
 		CAN1->MCR &= ~(1 << 16); //CAN working during debug
 	//filter banks(mode, scale, FIFO assignment, activation, filter values).....
+		FilterBankConfig(); //dual 16 bit, identifier list mode, filter bank number 0,... 
 }
 
 void CAN_NormalModeSetting(){
