@@ -1,13 +1,20 @@
 #include "CAN.h"
 
-void RecieveMailboxConfig(volatile uint32_t idDataRcv, volatile uint32_t dlcTimestampRcv, volatile uint32_t lowdataRcv,volatile uint32_t highdataRcv){
-		//receive as FIFO0
-		while((CAN1->RF0R & 0x3) != 0); //wait for FMP0 at least 1 pending msg
-		idDataRcv = CAN1->sFIFOMailBox[0].RIR;
-		dlcTimestampRcv = CAN1->sFIFOMailBox[0].RDTR;
-		lowdataRcv = CAN1->sFIFOMailBox[0].RDLR;
-		highdataRcv = CAN1->sFIFOMailBox[0].RDHR;
-		//release output mailbox after complete read
-		CAN1->RF0R |= (1 << 5);
-		
+// Dùng luôn bi?n global dã khai báo trong main.c
+extern volatile uint32_t idDataRcv;
+extern volatile uint32_t dlcTimestampRcv;
+extern volatile uint32_t lowdataRcv;
+extern volatile uint32_t highdataRcv;
+
+void RecieveMailboxConfig(){
+    // Ð?i d?n khi CÓ (>=1) pending message ? FIFO0
+    while ((CAN1->RF0R & 0x3) == 0) { /* wait */ }
+
+    idDataRcv        = CAN1->sFIFOMailBox[0].RIR;
+    dlcTimestampRcv  = CAN1->sFIFOMailBox[0].RDTR;
+    lowdataRcv       = CAN1->sFIFOMailBox[0].RDLR;
+    highdataRcv      = CAN1->sFIFOMailBox[0].RDHR;
+
+    // RELEASE FIFO0
+    CAN1->RF0R |= CAN_RF0R_RFOM0;
 }

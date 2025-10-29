@@ -4,7 +4,7 @@ void CAN_InitializationModeSetting(){
 		CAN1->MCR &= ~CAN_MCR_SLEEP; //clear sleep bit to wakeup 
 		while(CAN1->MCR & CAN_MSR_SLAK);
 		CAN1->MCR |= CAN_MCR_INRQ;	//enter initialization mode
-		while(!(CAN1->MCR & CAN_MSR_INAK)); 	//wait for hardware confirmed request to enter initialization mode
+		while(!(CAN1->MSR & CAN_MSR_INAK)); 	//wait for hardware confirmed request to enter initialization mode
 		//set Baudrate 9600 bit/s (16tq) => BRP = 233, TS1 = 12 => BS1 = 13tq, TS2 = 1 => BS2 = 2tq
 		CAN1->BTR = 0;	//reset register 
 		CAN1->BTR |= CAN_BS1_13tq;
@@ -26,9 +26,9 @@ void CAN_InitializationModeSetting(){
 void CAN_NormalModeSetting(){
 	//enter normal mode by clear SLEEP bit and INRQ bit in CAN_MCR reg
 		CAN1->MCR &= ~CAN_MCR_SLEEP; //clear sleep bit
-		while(CAN1->MCR & CAN_MSR_SLAK); //wait for hardware
+		while(CAN1->MSR & CAN_MSR_SLAK); //wait for hardware
 		CAN1->MCR &= ~CAN_MCR_INRQ;	// clear INRQ bit
-		while(CAN1->MCR & CAN_MSR_INAK); //wait for hardware
+		while(CAN1->MSR & CAN_MSR_INAK); //wait for hardware
 	//waiting for the occurrence of a sequence of 11 consecutive recessive bits (Bus Idle state) ?
 }
 
@@ -37,22 +37,33 @@ void CAN_SleepModeSetting(){
 		while(CAN1->MCR & CAN_MSR_INAK); //wait for hardware 
 		//enter sleep mode to save energy
 		CAN1->MCR |= CAN_MCR_SLEEP; //set sleep bit to enter low-energy mode
-		while(!(CAN1->MCR & CAN_MSR_SLAK)); //wait for hardware
+		while(!(CAN1->MSR & CAN_MSR_SLAK)); //wait for hardware
 }
 
 void CAN_Test_SilentModeSetting(){
 		CAN_InitializationModeSetting(); //enter initialization mode
 		CAN1->BTR |= CAN_BTR_SILM; //silent mode: analyze traffic
+	
+		CAN1->MCR &= ~CAN_MCR_INRQ;	//exit init mode
+    while (CAN1->MSR & CAN_MSR_INAK);
 }
 
 void CAN_Test_LoopbackModeSetting(){
-		CAN_InitializationModeSetting();	//enter initialization mode
-		CAN1->BTR |= CAN_BTR_LBKM; //loopback mode: selftest
+    CAN_InitializationModeSetting();   // v�o init
+    CAN1->BTR |= CAN_BTR_LBKM;         // loopback
+
+		//exit init mode
+    CAN1->MCR &= ~CAN_MCR_INRQ;
+    while (CAN1->MSR & CAN_MSR_INAK);
 }
+
 
 void CAN_Test_HotSelfTest(){
 		CAN_InitializationModeSetting();	//enter initialization mode
 	//combine silent+loopback
 		CAN1->BTR |= CAN_BTR_SILM; //silent mode: analyze traffic
 		CAN1->BTR |= CAN_BTR_LBKM; //loopback mode: selftest
+	
+		CAN1->MCR &= ~CAN_MCR_INRQ;		//exit init mode
+    while (CAN1->MSR & CAN_MSR_INAK);
 }
