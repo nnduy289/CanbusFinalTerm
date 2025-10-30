@@ -20,7 +20,7 @@ void CAN_InitializationModeSetting(){
 	//	CAN1->MCR |= CAN_MCR_TTCM; //time triggered communication
 		CAN1->MCR &= ~(1 << 16); //CAN working during debug
 	//filter banks(mode, scale, FIFO assignment, activation, filter values).....
-		FilterBankConfig(); //dual 16 bit, identifier list mode, filter bank number 0,... 
+		
 }
 
 void CAN_NormalModeSetting(){
@@ -41,7 +41,7 @@ void CAN_SleepModeSetting(){
 }
 
 void CAN_Test_SilentModeSetting(){
-		CAN_InitializationModeSetting(); //enter initialization mode
+		//CAN_InitializationModeSetting(); //enter initialization mode
 		CAN1->BTR |= CAN_BTR_SILM; //silent mode: analyze traffic
 	
 		CAN1->MCR &= ~CAN_MCR_INRQ;	//exit init mode
@@ -49,7 +49,7 @@ void CAN_Test_SilentModeSetting(){
 }
 
 void CAN_Test_LoopbackModeSetting(){
-    CAN_InitializationModeSetting();   // v�o init
+   // CAN_InitializationModeSetting();   // v�o init
     CAN1->BTR |= CAN_BTR_LBKM;         // loopback
 
 		//exit init mode
@@ -59,7 +59,7 @@ void CAN_Test_LoopbackModeSetting(){
 
 
 void CAN_Test_HotSelfTest(){
-		CAN_InitializationModeSetting();	//enter initialization mode
+		//CAN_InitializationModeSetting();	//enter initialization mode
 	//combine silent+loopback
 		CAN1->BTR |= CAN_BTR_SILM; //silent mode: analyze traffic
 		CAN1->BTR |= CAN_BTR_LBKM; //loopback mode: selftest

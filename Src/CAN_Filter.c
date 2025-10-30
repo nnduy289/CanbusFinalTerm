@@ -1,7 +1,7 @@
 #include "CAN.h"
 
 void FilterBankConfig(){
-    // Vào filter init
+    // Vï¿½o filter init
     CAN1->FMR |= CAN_FMR_FINIT;
 
     // Bank 0: 32-bit, MASK mode, FIFO0
@@ -15,10 +15,10 @@ void FilterBankConfig(){
     CAN1->sFilterRegister[0].FR1 = id;
     CAN1->sFilterRegister[0].FR2 = msk;
 
-    // Kích hoat filter
+    // Kï¿½ch hoat filter
     CAN1->FA1R |= (1U << 0);
 
-    // Thoát filter init
+    // Thoï¿½t filter init
     CAN1->FMR &= ~CAN_FMR_FINIT;
 }
 

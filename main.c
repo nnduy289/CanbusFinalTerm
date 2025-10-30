@@ -20,7 +20,9 @@ int main(void){
 		
     GPIOconfig();
 		 GPIOC->BSRR = (1 << 13);  // LED OFF
-	
+
+	CAN_InitializationModeSetting();    //initialize CAN bus
+    FilterBankConfig(); //dual 16 bit, identifier list mode, filter bank number 0,... 
     CAN_Test_LoopbackModeSetting();
 
     while (1) {
