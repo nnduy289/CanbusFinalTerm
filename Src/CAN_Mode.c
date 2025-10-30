@@ -7,8 +7,8 @@ void CAN_InitializationModeSetting(){
 		while(!(CAN1->MSR & CAN_MSR_INAK)); 	//wait for hardware confirmed request to enter initialization mode
 		//set Baudrate 9600 bit/s (16tq) => BRP = 233, TS1 = 12 => BS1 = 13tq, TS2 = 1 => BS2 = 2tq
 		CAN1->BTR = 0;	//reset register 
-		CAN1->BTR |= CAN_BS1_13tq;
-		CAN1->BTR |= CAN_BS2_2tq;
+		CAN1->BTR |= (12 << 16);	//TS1 = 12
+		CAN1->BTR |= (1 << 20);	//TS2 = 1
 		CAN1->BTR |= (233 & 0x3FF); 
 		
 		//set option for CAN bus

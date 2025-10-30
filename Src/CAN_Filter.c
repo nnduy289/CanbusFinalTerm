@@ -10,7 +10,7 @@ void FilterBankConfig(){
     CAN1->FFA1R &= ~(1U << 0);   // FIFO0
 
     // ID & MASK (Standard ID ? [31:21])
-    uint32_t id  = (0x1U   << 21);
+    uint32_t id  = (0x2U   << 21);
     uint32_t msk = (0x7FFU << 21);
     CAN1->sFilterRegister[0].FR1 = id;
     CAN1->sFilterRegister[0].FR2 = msk;

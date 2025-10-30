@@ -1,6 +1,6 @@
 #include "CAN.h"
 
-// Dùng luôn bi?n global dã khai báo trong main.c
+// Dï¿½ng luï¿½n bi?n global dï¿½ khai bï¿½o trong main.c
 extern volatile uint32_t idDataRcv;
 extern volatile uint32_t dlcTimestampRcv;
 extern volatile uint32_t lowdataRcv;

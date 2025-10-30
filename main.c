@@ -13,7 +13,6 @@ void GPIOconfig(void){
     GPIOC->CRH |=  (0x2 << 20); // MODE13 = 10b (2MHz), CNF13 = 00 (push-pull)
 }
 
-
 int main(void){
     // Clock CAN + GPIO
     RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
@@ -32,7 +31,7 @@ int main(void){
         uint8_t ide = (uint8_t)((idDataRcv >> 2) & 0x1);
         uint16_t stid = (uint16_t)((idDataRcv >> 21) & 0x7FF);
 
-        if (!ide && stid == 0x1) {
+        if (!ide && stid == 0x2) {
 						 GPIOC->BRR = (1 << 13);	// LED ON
 						
         } else {
