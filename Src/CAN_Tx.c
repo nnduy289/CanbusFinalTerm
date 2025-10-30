@@ -13,6 +13,6 @@ void TransmitMailboxConfig(){
 	CAN1->sTxMailBox[0].TIR |= CAN_TI0R_TXRQ;
 	while ((CAN1->TSR & CAN_TSR_RQCP0) == 0); //wait for complete transfer
 	CAN1->TSR |= CAN_TSR_RQCP0;               // clear flag
-}
+}	
 
 

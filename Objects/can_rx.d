@@ -18,8 +18,8 @@
 .\objects\can_rx.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\can_rx.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h
 .\objects\can_rx.o: .\Include\CAN_Mode.h
-.\objects\can_rx.o: .\Include\CAN_Tx.h
 .\objects\can_rx.o: .\Include\CAN.h
+.\objects\can_rx.o: .\Include\CAN_Tx.h
 .\objects\can_rx.o: .\Include\CAN_Rx.h
 .\objects\can_rx.o: .\Include\CAN_Filter.h
 .\objects\can_rx.o: .\Include\CAN_errorManage.h

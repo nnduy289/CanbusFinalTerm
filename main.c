@@ -24,7 +24,7 @@ int main(void){
     CAN_Test_LoopbackModeSetting();
 
     while (1) {
-        TransmitMailboxConfig();     // send STID=0x1
+        TransmitMailboxConfig();     // send STID=0x2
         RecieveMailboxConfig();      // receive msg through global variable & release FIFO
 
         
