@@ -18,8 +18,11 @@ int main(void){
     RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
     RCC->APB1ENR |= RCC_APB1ENR_CAN1EN;
 		
+		//Enable interrupt for CAN1_Receive FIFO0
+		NVIC_EnableIRQ(USB_LP_CAN1_RX0_IRQn);
+	
     GPIOconfig();
-		 GPIOC->BSRR = (1 << 13);  // LED OFF
+		GPIOC->BSRR = (1 << 13);  // LED OFF
 
 	CAN_InitializationModeSetting();    //initialize CAN bus
     FilterBankConfig(); //dual 16 bit, identifier list mode, filter bank number 0,... 
