@@ -46,7 +46,7 @@ int main(void){
 				//	CAN1->sTxMailBox[0].TDTR |= 1 << 8; //transmit global time => tu dong truyen 16-bit timer value captured at the SOF transmission
 					
 					//after complete config transmit mailbox, start request to transmit
-					CAN1->sTxMailBox[0].TIR |= CAN_TI0R_TXRQ;
+					CAN1->sTxMailBox[0].TIR |= CAN_TI0R_TXRQ; //also clear RQCP0 (request completed mailbox 0)
 				}
 				
         uint8_t ide = (uint8_t)((idDataRcv >> 2) & 0x1);
@@ -57,11 +57,11 @@ int main(void){
 						
         } else {
              GPIOC->BSRR = (1 << 13);  // LED OFF
-        } 
-			// if(flagOvr){
-			// 	GPIOC->BRR = (1 << 13);	// LED ON
-			// 	flagOvr = 0;
-			// }
+        }
+			/* if(flagOvr){
+			 	GPIOC->BRR = (1 << 13);	// LED ON
+			 	flagOvr = 0;
+			 } */
 				
     }
 }

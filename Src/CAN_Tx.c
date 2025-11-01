@@ -21,7 +21,7 @@ void interruptTransmitConfig(){
 }
 
 void USB_HP_CAN1_TX_IRQHandler(){
-	if(CAN1->TSR & CAN_TSR_TME0){
+	if(CAN1->TSR & CAN_TSR_RQCP0){
 		flagMailbox0 = 1;
 		CAN1->TSR |= CAN_TSR_RQCP0;               // clear flag
 	}
