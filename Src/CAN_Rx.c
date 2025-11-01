@@ -5,6 +5,8 @@ extern volatile uint32_t idDataRcv;
 extern volatile uint32_t dlcTimestampRcv;
 extern volatile uint32_t lowdataRcv;
 extern volatile uint32_t highdataRcv;
+extern volatile uint8_t flagOvr;
+//extern volatile uint8_t flagFullFiFo;
 
 void RecieveMailboxConfig(){
     // wait for pending msg come => FIFO had msg
@@ -35,16 +37,17 @@ void USB_LP_CAN1_RX0_IRQHandler(){
 			lowdataRcv       = CAN1->sFIFOMailBox[0].RDLR;
 			highdataRcv      = CAN1->sFIFOMailBox[0].RDHR;
 
-			// RELEASE FIFO0
+			//RELEASE FIFO0
 			CAN1->RF0R |= CAN_RF0R_RFOM0;
 		}
 		if(CAN1->RF0R & CAN_RF0R_FULL0){ 	//FIFO is full
-			CAN1->RF0R |= CAN_RF0R_RFOM0; //release msg to store next msg
+			//CAN1->RF0R |= CAN_RF0R_RFOM0; //release msg to store next msg
 			//turn on LED to indicate 
 		}
 		if(CAN1->RF0R & CAN_RF0R_FOVR0){	//FIFO is overload (full and new msg pass filter, come to FIFO)
-			CAN1->RF0R |= CAN_RF0R_RFOM0; //release msg to store next msg
+			//CAN1->RF0R |= CAN_RF0R_RFOM0; //release msg to store next msg
 			//turn on LED to indicate
+			flagOvr = 1;
 		}
 }
 

@@ -12,7 +12,7 @@ void CAN_InitializationModeSetting(){
 		CAN1->BTR |= (233 & 0x3FF); 
 		
 		//set option for CAN bus
-		CAN1->MCR &= ~CAN_MCR_TXFP;	//priority driven by the identifier of the msg: first come first serve
+		CAN1->MCR &= ~CAN_MCR_TXFP;	//priority driven by the identifier of the msg: low id => high priority
 		CAN1->MCR |= CAN_MCR_RFLM;	//msg will overwrite the previous one once FIFO full
 		CAN1->MCR &= ~CAN_MCR_NART; //automatically retransmit msg until it has been successfully transmitted according to the CAN standard
 		CAN1->MCR |= CAN_MCR_AWUM; //hardware tu danh thuc khi phat hien tin hieu CAN hop le
