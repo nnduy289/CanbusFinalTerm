@@ -11,6 +11,12 @@
 #include "CAN_timeTrigger.h"
 #include <stdio.h>
 
+typedef enum {
+    CAN_TX_OK = 0,
+    CAN_TX_ERROR,
+    CAN_TX_BUSY
+} CAN_TxStatus;
 
+CAN_TxStatus CAN_SendFrame(uint16_t stdId, uint8_t *data, uint8_t len);
 #endif // CAN_H_
 
