@@ -38,26 +38,26 @@ void USB_HP_CAN1_TX_IRQHandler(void) {
 }
 CAN_TxStatus CAN_SendFrame(uint16_t stdId, uint8_t *data, uint8_t len) {
     if (len > 8) len = 8;
-
     uint8_t mailbox;
+    
     if (CAN1->TSR & CAN_TSR_TME0) mailbox = 0;
     else if (CAN1->TSR & CAN_TSR_TME1) mailbox = 1;
     else if (CAN1->TSR & CAN_TSR_TME2) mailbox = 2;
     else return CAN_TX_BUSY;
-
-    CAN1->sTxMailBox[mailbox].TIR = (stdId << 21);
-    CAN1->sTxMailBox[mailbox].TDTR = len & 0xF;
-
+    
+    //Setup data
     uint32_t low = 0, high = 0;
-    for (int i = 0; i < 4 && i < len; i++) low |= data[i] << (8 * i);
-    for (int i = 4; i < len; i++) high |= data[i] << (8 * (i - 4));
-    CAN1->sTxMailBox[mailbox].TDLR = low;
-    CAN1->sTxMailBox[mailbox].TDHR = high;
-
-    CAN1->sTxMailBox[mailbox].TIR |= CAN_TI0R_TXRQ;
-
-    while ((CAN1->TSR & (1 << (0 + mailbox * 8))) == 0);
-    CAN1->TSR |= (1 << (0 + mailbox * 8));
-
+    for (int i = 0; i < 4 && i < len; i++) 
+        low |= ((uint32_t)data[i]) << (8 * i);
+    for (int i = 4; i < len; i++) 
+        high |= ((uint32_t)data[i]) << (8 * (i - 4));
+    
+    CAN1->sTxMailBox[mailbox].TIR = (stdId << 21);  
+    CAN1->sTxMailBox[mailbox].TDTR = 0;
+    CAN1->sTxMailBox[mailbox].TDTR |= len;       
+    CAN1->sTxMailBox[mailbox].TDLR = low;         
+    CAN1->sTxMailBox[mailbox].TDHR = high;      
+    CAN1->sTxMailBox[mailbox].TIR |= CAN_TI0R_TXRQ; 
+    
     return CAN_TX_OK;
 }
