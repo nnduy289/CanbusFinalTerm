@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "can_bus.h": "c",
+        "can_mode.h": "c",
+        "can.h": "c",
+        "can_tx.h": "c",
+        "can_filter.h": "c",
+        "can_errormanage.h": "c",
+        "can_rx.h": "c",
+        "can_timetrigger.h": "c"
+    }
+}

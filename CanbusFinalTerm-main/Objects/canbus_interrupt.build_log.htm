@@ -1,0 +1,348 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Duy ASUS, dnh, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.21a
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+C:\Users\ASUS\Personal\STUDY\25-26 HK1 nam 5\1stPrototypeCANbus\CanbusFinalTerm-main\canbus_interrupt.uvprojx
+Project File Date:  11/19/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling CAN_errorManage.c...
+compiling CAN_timeTrigger.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+src\CAN_timeTrigger.c(9): warning:  #1-D: last line of file ends without a newline
+  }
+src\CAN_timeTrigger.c: 19 warnings, 0 errors
+compiling main.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+main.c: 18 warnings, 0 errors
+compiling CAN_Rx.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+src\CAN_Rx.c: 18 warnings, 0 errors
+compiling CAN_Mode.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+src\CAN_Mode.c(69): warning:  #1-D: last line of file ends without a newline
+  }
+src\CAN_Mode.c: 19 warnings, 0 errors
+compiling CAN_Tx.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+src\CAN_Tx.c: 18 warnings, 0 errors
+compiling CAN_Filter.c...
+.\Include\CAN_Mode.h(12): warning:  #1295-D: Deprecated declaration CAN_InitializationModeSetting - give arg types
+  void CAN_InitializationModeSetting();
+.\Include\CAN_Mode.h(19): warning:  #1295-D: Deprecated declaration CAN_NormalModeSetting - give arg types
+  void CAN_NormalModeSetting();
+.\Include\CAN_Mode.h(25): warning:  #1295-D: Deprecated declaration CAN_SleepModeSetting - give arg types
+  void CAN_SleepModeSetting();
+.\Include\CAN_Mode.h(37): warning:  #1295-D: Deprecated declaration CAN_Test_SilentModeSetting - give arg types
+  void CAN_Test_SilentModeSetting();
+.\Include\CAN_Mode.h(46): warning:  #1295-D: Deprecated declaration CAN_Test_LoopbackModeSetting - give arg types
+  void CAN_Test_LoopbackModeSetting();    // 
+.\Include\CAN_Mode.h(51): warning:  #1295-D: Deprecated declaration CAN_Test_HotSelfTest - give arg types
+  void CAN_Test_HotSelfTest(); //silent + loopback
+.\Include\CAN_Tx.h(3): warning:  #1295-D: Deprecated declaration TransmitMailboxConfig - give arg types
+  void TransmitMailboxConfig();
+.\Include\CAN_Tx.h(4): warning:  #1295-D: Deprecated declaration interruptTransmitConfig - give arg types
+  void interruptTransmitConfig();
+.\Include\CAN_Tx.h(5): warning:  #1295-D: Deprecated declaration USB_HP_CAN1_TX_IRQHandler - give arg types
+  void USB_HP_CAN1_TX_IRQHandler();
+.\Include\CAN_Rx.h(3): warning:  #1295-D: Deprecated declaration RecieveMailboxConfig - give arg types
+  void RecieveMailboxConfig();
+.\Include\CAN_Rx.h(4): warning:  #1295-D: Deprecated declaration interruptRcvF0Config - give arg types
+  void interruptRcvF0Config();
+.\Include\CAN_Rx.h(5): warning:  #1295-D: Deprecated declaration USB_LP_CAN1_RX0_IRQHandler - give arg types
+  void USB_LP_CAN1_RX0_IRQHandler();
+.\Include\CAN_Rx.h(6): warning:  #1-D: last line of file ends without a newline
+  void interruptRcvF1Config();
+.\Include\CAN_Rx.h(6): warning:  #1295-D: Deprecated declaration interruptRcvF1Config - give arg types
+  void interruptRcvF1Config();
+.\Include\CAN_Filter.h(7): warning:  #1-D: last line of file ends without a newline
+  void FilterBankConfig();
+.\Include\CAN_Filter.h(7): warning:  #1295-D: Deprecated declaration FilterBankConfig - give arg types
+  void FilterBankConfig();
+.\Include\CAN_errorManage.h(3): warning:  #1295-D: Deprecated declaration CAN_ErrorInterruptConfig - give arg types
+  void CAN_ErrorInterruptConfig();
+.\Include\CAN_errorManage.h(4): warning:  #1295-D: Deprecated declaration CAN_ErrorHandler - give arg types
+  void CAN_ErrorHandler();
+src\CAN_Filter.c: 18 warnings, 0 errors
+compiling misc.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_exti.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_gpio.c...
+compiling system_stm32f10x.c...
+compiling stm32f10x_rcc.c...
+linking...
+Program Size: Code=3032 RO-data=268 RW-data=20 ZI-data=1636  
+FromELF: creating hex file...
+".\Objects\canbus_interrupt.axf" - 0 Error(s), 110 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::Device:StdPeriph Drivers:Framework:3.6.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Framework Version: 3.6.0
+   * Component: ADC Version: 3.6.0
+   * Component: EXTI Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: CAN Version: 3.6.0
+   * Component: Startup Version: 1.0.0
+   * Component: DMA Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\ASUS\Personal\STUDY\25-26 HK1 nam 5\1stPrototypeCANbus\CanbusFinalTerm-main\RTE
+  C:\Users\ASUS\Personal\STUDY\25-26 HK1 nam 5\1stPrototypeCANbus\CanbusFinalTerm-main\RTE\Device\STM32F103C8
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+
+   * Component: Keil::Device:StdPeriph Drivers:ADC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_adc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_adc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:EXTI:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_exti.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_exti.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:CAN:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_can.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_can.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f10x.c
+
+   * Component: Keil::Device:StdPeriph Drivers:DMA:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_dma.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_dma.h
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
